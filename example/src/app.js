@@ -19,6 +19,7 @@ var App = React.createClass({ // eslint-disable-line
     return ( // eslint-disable-line
       <div>
         <Geosuggest
+          ref={el=>this._geoSuggest=el}
           fixtures={fixtures}
           onFocus={this.onFocus}
           onBlur={this.onBlur}
@@ -59,6 +60,8 @@ var App = React.createClass({ // eslint-disable-line
    * @param  {Object} suggest The suggest
    */
   onSuggestSelect: function(suggest) {
+    console.log('blur');
+    this._geoSuggest.blur();
     console.log(suggest); // eslint-disable-line
   },
 
