@@ -658,6 +658,7 @@ var Geosuggest = function (_React$Component) {
       }
 
       _this.setState({
+        activeSuggest: null,
         isSuggestsHidden: true,
         userInput: suggest.label
       });
